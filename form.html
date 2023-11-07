@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="number"],
+        textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-label {
+            margin-left: 10px;
+        }
+
+        .checkbox-group {
+            margin-top: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                max-width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            input[type="submit"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <label for="reqId">Request ID:</label>
+            <input type="text" id="reqId" name="reqId" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <label for="deviceCount">Device Count:</label>
+            <input type="number" id="deviceCount" name="deviceCount" required>
+
+            <label for="ratePerDevice">Rate per Device:</label>
+            <input type="number" id="ratePerDevice" name="ratePerDevice" required>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="addOnsRequired" name="addOnsRequired">
+                <label class="checkbox-label" for="addOnsRequired">Add-ons Required</label>
+            </div>
+
+            <div id="addOnsOptions" class="checkbox-group" style="display: none;">
+                <label for="sosCount">SOS Count:</label>
+                <input type="number" id="sosCount" name="sosCount">
+
+                <label for="wireLength">Wire Length (meters):</label>
+                <input type="number" id="wireLength" name="wireLength">
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to show/hide SOS and Wire options based on Add-ons checkbox
+        document.getElementById("addOnsRequired").addEventListener("change", function() {
+            var addOnsOptions = document.getElementById("addOnsOptions");
+            addOnsOptions.style.display = this.checked ? "block" : "none";
+        });
+    </script>
+</body>
+
+</html>

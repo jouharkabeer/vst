@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Responsive Dashboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../style.css">
+         <!-- MATERIAL CDN -->
+         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+         rel="stylesheet">
+         <!-- STYLESHEET-->
+    </head>
+    <body>
+        <div class="container">
+            <aside>
+                <div class="top">
+                <div class="logo">
+                    <img src="./assets/images/logo_og.png">
+                    <h2>VST<span class="danger">Mobility</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+                
+            </div>
+            
+
+                <div class="sidebar">
+
+                    <a href="Sales.html">
+                        <span class="material-icons-sharp">grid_view</span>
+                        <h3>Dashboard</h3>
+                    </a>
+                    
+
+                    <a href="saless.html" class="active">
+                        <span class="material-icons-sharp" >add</span>
+                        <h3>Add Request</h3>
+                    </a>
+
+                    <a href="#">
+                        <span class="material-icons-sharp">update</span>
+                        <h3>Update required</h3>
+                        <span class="message-count">26</span>
+                    </a>
+
+                    <a href="#">
+                        <span class="material-icons-sharp">person_outline</span>
+                        <h3>Customer</h3>
+                    </a>
+
+                    <a href="#">
+                        <span class="material-icons-sharp">pending</span>
+                        <h3>Amount Pending</h3>
+                    </a>
+
+                    <a href="#">
+                        <span class="material-icons-sharp">insights</span>
+                        <h3>Sale growth</h3>
+                    </a>
+
+                    <a href="#">
+                        <span class="material-icons-sharp">settings</span>
+                        <h3>Settings</h3>
+                    </a>
+        
+                    <a href="#">
+                        <span class="material-icons-sharp">logout</span>
+                        <h3>Logout</h3>
+                    </a>          
+                </div>
+            </aside>
+            <!--------------------- END OF ASIDE ------------------>
+            <main>
+                <div class="rowr">
+                <h1>Add Request</h1>
+                <div class="right">
+                    <div class="top">
+                        <button id="menu-btn">
+                            <span class="material-icons-sharp">menu</span>
+                        </button>
+                        <div class="theme-toggler">
+                            <span class="material-icons-sharp active">light_mode</span>
+                            <span class="material-icons-sharp">dark_mode</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="recent-updates">
+                <form>
+                    <label for="reqId">Request ID:</label>
+                    <input type="text" id="reqId" name="reqId" required><br>
+                
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
+                
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
+                
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" required></textarea><br>
+                
+                    <label for="deviceCount">Device Count:</label>
+                    <input type="number" id="deviceCount" name="deviceCount" required><br>
+                
+                    <label for="ratePerDevice">Rate per Device:</label>
+                    <input type="number" id="ratePerDevice" name="ratePerDevice" required><br>
+                
+                    <label for="addOnsRequired">Add-ons Required:</label>
+                    <input type="checkbox" id="addOnsRequired" name="addOnsRequired">
+                
+                    <div id="addOnsOptions" style="display:none;">
+                        <label for="sos">SOS:</label>
+                        <input type="checkbox" id="sos" name="sos"><br>
+                
+                        <label for="wire">Wire:</label>
+                        <input type="checkbox" id="wire" name="wire"><br>
+                    </div>
+                
+                    <input type="submit" value="Submit">
+                </form>
+                
+                
+                
+            </div>
+
+
+        </div>   
+        <script>
+            document.getElementById("addOnsRequired").addEventListener("change", function() {
+                var addOnsOptions = document.getElementById("addOnsOptions");
+                addOnsOptions.style.display = this.checked ? "block" : "none";
+            });
+        </script>   
+        <script src="./orders.js"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>

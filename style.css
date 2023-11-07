@@ -725,7 +725,8 @@ form {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: var(--color-white);
+    color: var(--color-dark);
 }
 
 label {
@@ -743,15 +744,17 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    color: var(--color-dark);
+    background-color: var(--color-white);
 }
 
-.checkbox-container {
+.form-check {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.checkbox-label {
+.form-check label {
     margin-left: 10px;
 }
 
@@ -760,11 +763,12 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
+    background-color: var(--color-success);
+    color: var(--color-white);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    align-self: center;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -803,4 +807,34 @@ input[type="submit"]:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px; /* Add margin between input groups if needed */
+}
+
+.input-group label {
+    margin-bottom: 5px; /* Add margin below labels if needed */
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 90%
+     /* Set the width of the input fields */
+}
+
+.recent-updates canvas{
+    color: var(--color-white);
 }

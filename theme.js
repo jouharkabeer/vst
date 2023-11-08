@@ -13,16 +13,13 @@ closeBtn.addEventListener('click', () => {
     sideMenu.style.display = 'none';
 })
 
-
-
-
 themeToggler.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme-variables');
 
     themeToggler.querySelector('span').classList.toggle('active');
 })
 // fill orders in table
-Orders.forEach(order => {
+v.forEach(rder => {
     const tr = document.createElement('tr');
     const trContent = `
                         <td>${order.productName}</td>

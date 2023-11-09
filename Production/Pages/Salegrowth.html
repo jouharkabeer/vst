@@ -3,12 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>VST Mobility</title>
+        <title>Responsive Dashboard</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../../style.css">
         <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
          <!-- MATERIAL CDN -->
+         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
          <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
          rel="stylesheet">
 
@@ -20,7 +21,7 @@
             <aside>
                 <div class="top">
                 <div class="logo">
-                    <img src="../assets/images/logo_og.png">
+                    <img src="./assets/images/logo_og.png">
                     <h2>VST<span class="danger">Mobility</span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -32,13 +33,13 @@
 
                 <div class="sidebar">
 
-                    <a href="../Sales.html">
+                    <a href="Sales.html">
                         <span class="material-icons-sharp">grid_view</span>
                         <h3>Dashboard</h3>
                     </a>
                     
 
-                    <a href="Add request.html" class="active">
+                    <a href="Add request.html" >
                         <span class="material-icons-sharp" >add</span>
                         <h3>Add Request</h3>
                     </a>
@@ -59,8 +60,8 @@
                         <h3>Amount Pending</h3>
                     </a>
 
-                    <a href="Salegrowth.html">
-                        <span class="material-icons-sharp" >insights</span>
+                    <a href="Salegrowth.html" class="active">
+                        <span class="material-icons-sharp">insights</span>
                         <h3>Sale growth</h3>
                     </a>
 
@@ -79,7 +80,7 @@
             <main>
                 <div class="recent-updates">
                 <div class="rowr">
-                <h1>Add Request</h1>
+                <h1>Sale Growth</h1>
                 <div class="right">
                     <div class="top">
                         <button id="menu-btn">
@@ -95,62 +96,8 @@
 
             
 
-<div class="recent-orders">
-            <form>
-                <label for="reqId">Request ID:</label>
-                <input type="text" id="reqId" name="reqId" required>
-    
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-    
-                <label for="phoneNumber">Phone Number:</label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" required>
-    
-                <label for="address">Address:</label>
-                <textarea id="address" name="address" required></textarea>
-    
-                <div class="form-group">
-                    <div class="input-group">
-                        <label for="deviceCount">Device Count:</label>
-                        <input type="number" id="deviceCount" name="deviceCount" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="ratePerDevice">Rate/Device:</label>
-                        <input type="number" id="ratePerDevice" name="ratePerDevice" required>
-                    </div>
-                </div>
-                
-                <div class="form-check">
-                    <input  type="checkbox" id="addOnsRequired" name="addOnsRequired">
-                    <label class="form-check-label" for="addOnsRequired" style="margin-bottom: 10px;">Add-ons Required</label>
-                </div>
-
-                <div class="form-group" id="addOnsOptions" style="display: none;">
-                    <div>
-                    <div class="input-group" >
-                        <label for="sos">SOS</label>
-                        <input type="number" id="sos" name="sos" class="form-control">
-                    </div>
-                    <div class="input-group">
-                        <label for="wire">Wire</label>
-                        <input type="number" id="wire" name="wire" class="form-control">
-                    </div>
-                    
-                </div>
-                <div>
-                    <div class="input-group">
-                        <label for="rateperSOS">Rate/SOS</label>
-                        <input type="number" id="rateperSOS" name="rateperSOS" class="form-control">
-                    </div>
-                    <div class="input-group" >
-                        <label for="ratepermeter">Rate/Meter</label>
-                        <input type="number" id="ratepermeter" name="ratepermeter" class="form-control">
-                    </div>
-                </div>
-                </div>
-    
-                <input type="submit" value="Submit">
-            </form>
+            <div class="recent-updates">
+                    <canvas id="salesChart"></canvas>
             </div>
         </div>
     
@@ -158,15 +105,8 @@
                 
                 
             </div> 
-        <script>
-
-        document.getElementById("addOnsRequired").addEventListener("change", function() {
-        var addOnsOptions = document.getElementById("addOnsOptions");
-        addOnsOptions.style.display = this.checked ? "flex" : "none";
-        });
-
-        </script>   
-        <script src="../orders.js"></script>
-        <script src="../index.js"></script>
+            <script src="./growth.js"></script>
+            <script src="../index.js"></script>
+            <script src="../orders.js"></script>
     </body>
 </html>

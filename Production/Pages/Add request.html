@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>VST Mobility</title>
+        <title>Responsive Dashboard</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../../style.css">
@@ -20,7 +20,7 @@
             <aside>
                 <div class="top">
                 <div class="logo">
-                    <img src="../assets/images/logo_og.png">
+                    <img src="./assets/images/logo_og.png">
                     <h2>VST<span class="danger">Mobility</span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -119,34 +119,21 @@
                         <input type="number" id="ratePerDevice" name="ratePerDevice" required>
                     </div>
                 </div>
-                
+    
                 <div class="form-check">
                     <input  type="checkbox" id="addOnsRequired" name="addOnsRequired">
                     <label class="form-check-label" for="addOnsRequired" style="margin-bottom: 10px;">Add-ons Required</label>
                 </div>
 
                 <div class="form-group" id="addOnsOptions" style="display: none;">
-                    <div>
                     <div class="input-group" >
-                        <label for="sos">SOS</label>
-                        <input type="number" id="sos" name="sos" class="form-control">
+                        <label for="deviceCount">SOS</label>
+                        <input type="number" id="deviceCount" name="deviceCount" class="form-control">
                     </div>
                     <div class="input-group">
-                        <label for="wire">Wire</label>
-                        <input type="number" id="wire" name="wire" class="form-control">
+                        <label for="ratePerDevice">Wire (meters)</label>
+                        <input type="number" id="ratePerDevice" name="ratePerDevice" class="form-control">
                     </div>
-                    
-                </div>
-                <div>
-                    <div class="input-group">
-                        <label for="rateperSOS">Rate/SOS</label>
-                        <input type="number" id="rateperSOS" name="rateperSOS" class="form-control">
-                    </div>
-                    <div class="input-group" >
-                        <label for="ratepermeter">Rate/Meter</label>
-                        <input type="number" id="ratepermeter" name="ratepermeter" class="form-control">
-                    </div>
-                </div>
                 </div>
     
                 <input type="submit" value="Submit">

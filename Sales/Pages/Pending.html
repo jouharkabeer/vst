@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>VST Mobility</title>
-        <link href="./assets/images/logo_og.png" rel="icon">
+        <link href="../assets/images/logo_og.png" rel="icon">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../../style.css">
@@ -48,12 +48,12 @@
                         <span class="message-count">26</span>
                     </a>
 
-                    <a href="customer_data.html" class="active">
+                    <a href="customer_data.html">
                         <span class="material-icons-sharp">person_outline</span>
                         <h3>Customer</h3>
                     </a>
 
-                    <a href="Pending.html">
+                    <a href="Pending.html" class="active">
                         <span class="material-icons-sharp">pending</span>
                         <h3>Amount Pending</h3>
                     </a>
@@ -135,8 +135,9 @@
         </div>   
         <script src="./Customer.js"></script>
         <script>
-            // fill Customer in table
-Customer.forEach(customer => {
+            Customer.forEach(customer => {
+                if(customer.payment === 'Not paid' || customer.payment === 'Initiated')
+                {
     const tr = document.createElement('tr');
     const trContent = `
                         <td>${customer.customerid}</td>
@@ -158,6 +159,7 @@ Customer.forEach(customer => {
                         `;
     tr.innerHTML = trContent;
     document.querySelector('table tbody').appendChild(tr);
+                        }
 })
         </script>
     </body>

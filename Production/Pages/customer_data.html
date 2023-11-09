@@ -19,7 +19,7 @@
             <aside>
                 <div class="top">
                 <div class="logo">
-                    <img src="../assets/images/logo_og.png">
+                    <img src="./assets/images/logo_og.png">
                     <h2>VST<span class="danger">Mobility</span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -53,7 +53,7 @@
                         <h3>Customer</h3>
                     </a>
 
-                    <a href="Pending.html">
+                    <a href="#">
                         <span class="material-icons-sharp">pending</span>
                         <h3>Amount Pending</h3>
                     </a>
@@ -134,31 +134,7 @@
                 <!-------------------------- END OF TOP ------------------------------->
         </div>   
         <script src="./Customer.js"></script>
-        <script>
-            // fill Customer in table
-Customer.forEach(customer => {
-    const tr = document.createElement('tr');
-    const trContent = `
-                        <td>${customer.customerid}</td>
-                        <td>${customer.name}</td>
-                        <td>${customer.phonenumber}</td>
-                        <td>${customer.quantity}</td>
-
-                        <td class="${customer.orderstatus === 
-                        'Declined' ? 'danger' : customer.
-                        orderstatus === 'Pending' ? 'warning'
-                        : 'primary'}">${customer.orderstatus}</td>
-
-                        <td class="${customer.payment === 
-                            'Not paid' ? 'danger' : customer.
-                            payment === 'Initiated' ? 'warning'
-                            : customer.payment === 'Received' ? 'success' : 'primary'}">${customer.payment}</td>
-
-                        <td class="primary">Details</td>
-                        `;
-    tr.innerHTML = trContent;
-    document.querySelector('table tbody').appendChild(tr);
-})
-        </script>
+        <script src="../../theme.js"></script>
+        <script src="../index.js"></script>
     </body>
 </html>

@@ -1,5 +1,5 @@
 var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-                var salesData = [50000, 60000, 8000, 90000, 85000, 95000, 110000, 105000, 120000, 135000, 130000, 140000];
+                var salesData = [50000, 60000, 75000, 90000, 85000, 95000, 110000, 105000, 120000, 135000, 130000, 140000];
                 var ctx = document.getElementById('salesChart').getContext('2d');
                 var salesChart = new Chart(ctx, {
                     type: 'line',

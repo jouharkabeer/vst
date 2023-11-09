@@ -89,19 +89,9 @@ const Customer = [
     }
  ]
 
-const sideMenu = document.querySelector("aside");
+ const sideMenu = document.querySelector("aside");
 const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
-const themeToggler = document.querySelector(".theme-toggler");
-
-
-
-
-themeToggler.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme-variables');
-
-    themeToggler.querySelector('span').classList.toggle('active');
-})
 
 // show sidebar
 menuBtn.addEventListener('click', () => {
@@ -113,4 +103,27 @@ closeBtn.addEventListener('click', () => {
     sideMenu.style.display = 'none';
 })
 
+// fill Customer in table
+Customer.forEach(customer => {
+    const tr = document.createElement('tr');
+    const trContent = `
+                        <td>${customer.customerid}</td>
+                        <td>${customer.name}</td>
+                        <td>${customer.phonenumber}</td>
+                        <td>${customer.quantity}</td>
 
+                        <td class="${customer.orderstatus === 
+                        'Declined' ? 'danger' : customer.
+                        orderstatus === 'Pending' ? 'warning'
+                        : 'primary'}">${customer.orderstatus}</td>
+
+                        <td class="${customer.payment === 
+                            'Not paid' ? 'danger' : customer.
+                            payment === 'Initiated' ? 'warning'
+                            : customer.payment === 'Received' ? 'success' : 'primary'}">${customer.payment}</td>
+
+                        <td class="primary">Details</td>
+                        `;
+    tr.innerHTML = trContent;
+    document.querySelector('table tbody').appendChild(tr);
+})

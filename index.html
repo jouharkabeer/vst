@@ -1,67 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login</title>
-    <meta name="description" content="">
+	<title>Jouhar</title>
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
-    <style>
-        /* Your custom styles here */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            background-color: aqua;
-        }
-
-        button {
-            padding: 15px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="col-md-3">
-           <a href="./Admin/Admin.html"> <button>Admin Login</button> </a>
-        </div>
-        <div class="col-md-3">
-           <a href="./Sales/Sales.html"> <button>Sales Login</button> </a>
-        </div>
-        <div class="col-md-3">
-            <a href="Production/Production.html"><button>Production Login</button></a>
-        </div>
-        <div class="col-md-3">
-            <button>Finance Login</button>
-        </div>
-        <div class="col-md-3">
-            <button>Customer Care Login</button>
-        </div>
-    </div>
-</body>
+  <div class="wrapper">
+    <form onsubmit="return checking()">
+    <div class="form login">
+      <h2 class="redgamers">Jouhar</h2>
+      <label>
+        <span>Username</span>
+       <input class="placeholder"type="email"  id="Email" name="email" id="input">
+      </label>
+      <label>
+        <span>Password</span>
+       <input class="placeholder" type="password" id="password" name="password" id="input">
+      </label>
+      <button class="enviar" type="submit">Login</button>
+    </div></form>
+  </div>
 
+
+<script type="text/javascript"> 
+   function checking() {
+      // Get the entered username and password
+      var username = document.getElementById('Email').value;
+      var password = document.getElementById('password').value;
+
+
+      if (username === 'admin213@jouhar.com' && password === '123456') {
+        window.location.href = 'Admin/Admin.html';
+        return false; 
+      } 
+      else if (username === 'sales123@jouhar.com' && password === '123000') {
+        window.location.href = 'Sales/Sales.html';
+        return false;
+      }
+      else {
+        alert('Invalid username or password for more info visit \n https://github.com/jouharkabeer/vst/blob/main/README.md');
+        
+        return false; 
+      }
+    }
+
+</script>
+</body>
 </html>
+
+

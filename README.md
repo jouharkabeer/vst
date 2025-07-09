@@ -4,12 +4,12 @@
 Visit the live demo: [VST Live Demo](https://jouharkabeer.github.io/vst/)
 
 ## Admin Login
-- **Username:** admin213@jouhar.com
-- **Password:** 123456
+- **Username:** admin
+- **Password:** 123
 
 ## Sales Login
-- **Username:** sales123@jouhar.com
-- **Password:** 123000
+- **Username:** sales
+- **Password:** 123
 
 ## Project Overview
 This project is a simple virtual sales tool implemented using HTML, CSS, and JavaScript.

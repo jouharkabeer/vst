@@ -4,11 +4,11 @@
 Visit the live demo: [VST Live Demo](https://jouharkabeer.github.io/vst/)
 
 ## Admin Login
-- **Username:** admin
+- **Username:** admin@jouharkabeer.in
 - **Password:** 123
 
 ## Sales Login
-- **Username:** sales
+- **Username:** sales@jouharkabeer.in
 - **Password:** 123
 
 ## Project Overview

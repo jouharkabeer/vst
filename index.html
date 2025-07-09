@@ -33,16 +33,16 @@
       var password = document.getElementById('password').value;
 
 
-      if (username === 'admin213@jouhar.com' && password === '123456') {
+      if (username === 'admin' && password === '123') {
         window.location.href = 'Admin/Admin.html';
         return false; 
       } 
-      else if (username === 'sales123@jouhar.com' && password === '123000') {
+      else if (username === 'salesman' && password === '123') {
         window.location.href = 'Sales/Sales.html';
         return false;
       }
       else {
-        alert('Invalid username or password for more info visit \n https://github.com/jouharkabeer/vst/blob/main/README.md');
+        alert('Invalid username or password, \n for Admin (Username = Admin & Password = 123) \n for Sales (Username = salesman & Password = 123');
         
         return false; 
       }
